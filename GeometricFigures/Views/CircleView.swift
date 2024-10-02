@@ -17,6 +17,9 @@ struct CircleView: View {
         VStack {
             
             // Add an image
+            Image("CircleDiagram")
+                .resizable()
+                .scaledToFit()
             
             // Label (describe what the slider is for)
             Text("Radius")
@@ -41,8 +44,11 @@ struct CircleView: View {
 
             // Label (show the circumference)
             Text("Circumference is: \(currentCircle.circumference.formatted())")
+            
+            Spacer()
 
         }
+        .padding()
     }
 }
 
