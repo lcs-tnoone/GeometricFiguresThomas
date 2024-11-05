@@ -22,7 +22,12 @@ struct CircleView: View {
                 .scaledToFit()
             
             // Label (describe what the slider is for)
-            Text("Radius")
+            HStack {
+                Text("Radius")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Spacer()
+            }
             
             // 1. INPUT
             // Slider control – to allow for user input
@@ -34,16 +39,56 @@ struct CircleView: View {
             
             // 3. OUTPUT
             // Label (show the current slider value)
-            Text("Radius is: \(currentCircle.radius.formatted())")
-            
+            HStack {
+                Text("\(currentCircle.radius.formatted()) units")
+                Spacer()
+            }
+                        
             // Label (show the diameter)
-            Text("Diameter is: \(currentCircle.diameter.formatted())")
+            HStack {
+                Text("Diameter")
+                    .font(.headline)
+                Spacer()
+            }
+            .padding(.top)
+            .padding(.bottom, 5)
+
+            HStack {
+                Text("\(currentCircle.diameter.formatted()) units")
+                Spacer()
+            }
+            .padding(.bottom)
 
             // Label (show the area)
-            Text("Area is: \(currentCircle.area.formatted())")
+            HStack {
+                Text("Area")
+                    .font(.headline)
+                Spacer()
+            }
+            .padding(.top)
+            .padding(.bottom, 5)
+
+            HStack {
+                Text("\(currentCircle.area.formatted()) square units")
+                Spacer()
+            }
+            .padding(.bottom)
 
             // Label (show the circumference)
-            Text("Circumference is: \(currentCircle.circumference.formatted())")
+            HStack {
+                Text("Circumference")
+                    .font(.headline)
+                Spacer()
+            }
+            .padding(.top)
+            .padding(.bottom, 5)
+
+            HStack {
+                Text("\(currentCircle.circumference.formatted()) units")
+                Spacer()
+            }
+            .padding(.bottom)
+
             
             Spacer()
 
