@@ -45,50 +45,55 @@ struct CircleView: View {
             }
                         
             // Label (show the diameter)
-            HStack {
-                Text("Diameter")
-                    .font(.headline)
-                Spacer()
-            }
-            .padding(.top)
-            .padding(.bottom, 5)
+            VStack {
+                HStack {
+                    Text("Diameter")
+                        .font(.headline)
+                    Spacer()
+                }
+                .padding(.top)
+                .padding(.bottom, 5)
 
-            HStack {
-                Text("\(currentCircle.diameter.formatted()) units")
-                Spacer()
+                HStack {
+                    Text("\(currentCircle.diameter.formatted()) units")
+                    Spacer()
+                }
+                .padding(.bottom)
             }
-            .padding(.bottom)
 
             // Label (show the area)
-            HStack {
-                Text("Area")
-                    .font(.headline)
-                Spacer()
-            }
-            .padding(.top)
-            .padding(.bottom, 5)
+            VStack {
+                HStack {
+                    Text("Area")
+                        .font(.headline)
+                    Spacer()
+                }
+                .padding(.top)
+                .padding(.bottom, 5)
 
-            HStack {
-                Text("\(currentCircle.area.formatted()) square units")
-                Spacer()
+                HStack {
+                    Text("\(currentCircle.area.formatted()) square units")
+                    Spacer()
+                }
+                .padding(.bottom)
             }
-            .padding(.bottom)
 
             // Label (show the circumference)
-            HStack {
-                Text("Circumference")
-                    .font(.headline)
-                Spacer()
-            }
-            .padding(.top)
-            .padding(.bottom, 5)
+            VStack {
+                HStack {
+                    Text("Circumference")
+                        .font(.headline)
+                    Spacer()
+                }
+                .padding(.top)
+                .padding(.bottom, 5)
 
-            HStack {
-                Text("\(currentCircle.circumference.formatted()) units")
-                Spacer()
+                HStack {
+                    Text("\(currentCircle.circumference.formatted()) units")
+                    Spacer()
+                }
+                .padding(.bottom)
             }
-            .padding(.bottom)
-
             
             Spacer()
 
